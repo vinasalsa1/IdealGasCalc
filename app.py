@@ -152,9 +152,9 @@ with tab3:
     "Sistem SI": {
         "R": 8.314,
         "unit_R": "J/(mol.K)",
-        "tekanan": ("kPa", "Pa"),
-        "volume": ("m³", "dm³"),
-        "default_pressure": 101.325,
+        "tekanan": ( "Pa"),
+        "volume": ("m³"),
+        "default_pressure": 101325,
         "default_volume": 0.0224
     },
     "Sistem Atmosfer": {
