@@ -206,16 +206,17 @@ with tab3:
         st.subheader("Variabel Gas")
         # Tekanan mengikuti sistem
         P = st.number_input(
-            f"Tekanan (P) [{system['tekanan'][0]}]",
-            value=system["default_pressure"],
-            step=0.01
+    f"Tekanan (P) [{system['tekanan'][0]}]",
+    value=float(system["default_pressure"]),  # ubah ke float
+    step=0.01
         )
+
         
         # Volume mengikuti sistem
         V = st.number_input(
-            f"Volume (V) [{system['volume'][0]}]",
-            value=system["default_volume"],
-            step=0.01
+    f"Volume (V) [{system['volume'][0]}]",
+    value=float(system["default_volume"]),  # ubah ke float juga
+    step=0.01
         )
     
     with col2:
