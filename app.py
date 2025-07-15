@@ -149,14 +149,15 @@ with tab2:
 with tab3:
     # Konstanta gas ideal dengan satuan yang saling terkait
     R_systems = {
-    "Sistem SI": {
-        "R": 8.314,
-        "unit_R": "J/(mol.K)",
-        "tekanan": ("kPa", "Pa"),
-        "volume": ("m³", "dm³"),
-        "default_pressure": 101.325,
-        "default_volume": 0.0224
-    },
+   "Sistem SI": {
+    "R": 8.314,
+    "unit_R": "J/(mol.K)",
+    "tekanan": ("Pa",),            # tuple satu elemen
+    "volume": ("m³",),             # tuple satu elemen
+    "default_pressure": 101325,    # dalam Pa, nilai biasanya 101325 bukan 101.325
+    "default_volume": 0.0224       # m³/mol pada STP
+},
+
     "Sistem Atmosfer": {
         "R": 0.082057,
         "unit_R": "L.atm/(mol.K)",
