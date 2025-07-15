@@ -439,5 +439,5 @@ elif konversi_opsi == "Volume":
 - {format_angka(dm3, 3)} dm³
 """)
 
-        st.caption("Catatan: 1 dm³ dianggap setara dengan 1 L dalam konteks kimia.")
+    st.caption("Catatan: 1 dm³ dianggap setara dengan 1 L dalam konteks kimia.")
 
