@@ -339,6 +339,7 @@ with tab4:
 
 
 with tab5:
+    with tab5:
     st.header("🧾 Konversi Satuan")
     st.subheader("Konversi Tekanan, Suhu, dan Volume")
 
@@ -349,18 +350,34 @@ with tab5:
         tekanan_input = st.number_input("Masukkan nilai tekanan", value=1.0)
         satuan_tekanan = st.selectbox("Dari satuan:", ["atm", "mmHg", "Pa", "kPa"])
 
-        tekanan = {
-            "atm": tekanan_input,
-            "mmHg": tekanan_input * 760 if satuan_tekanan == "atm" else tekanan_input / 1.0 if satuan_tekanan == "mmHg" else tekanan_input / 133.322 if satuan_tekanan == "Pa" else tekanan_input * 1000 / 133.322,
-            "Pa": tekanan_input * 101325 if satuan_tekanan == "atm" else tekanan_input * 133.322 if satuan_tekanan == "mmHg" else tekanan_input if satuan_tekanan == "Pa" else tekanan_input * 1000,
-            "kPa": tekanan_input * 101.325 if satuan_tekanan == "atm" else tekanan_input * 0.133322 if satuan_tekanan == "mmHg" else tekanan_input / 1000 if satuan_tekanan == "Pa" else tekanan_input
-        }
+        if satuan_tekanan == "atm":
+            atm = tekanan_input
+            mmHg = tekanan_input * 760
+            Pa = tekanan_input * 101325
+            kPa = tekanan_input * 101.325
+        elif satuan_tekanan == "mmHg":
+            atm = tekanan_input / 760
+            mmHg = tekanan_input
+            Pa = tekanan_input * 133.322
+            kPa = tekanan_input * 0.133322
+        elif satuan_tekanan == "Pa":
+            atm = tekanan_input / 101325
+            mmHg = tekanan_input / 133.322
+            Pa = tekanan_input
+            kPa = tekanan_input / 1000
+        elif satuan_tekanan == "kPa":
+            atm = tekanan_input / 101.325
+            mmHg = tekanan_input / 0.133322
+            Pa = tekanan_input * 1000
+            kPa = tekanan_input
 
-        st.write(f"**Hasil Konversi:**")
-        st.write(f"- {tekanan['atm']:.4f} atm")
-        st.write(f"- {tekanan['mmHg']:.2f} mmHg")
-        st.write(f"- {tekanan['Pa']:.2f} Pa")
-        st.write(f"- {tekanan['kPa']:.3f} kPa")
+        st.success(f"""
+        **Hasil Konversi Tekanan:**
+        - {atm:.4f} atm
+        - {mmHg:.2f} mmHg
+        - {Pa:.2f} Pa
+        - {kPa:.3f} kPa
+        """)
 
     elif konversi_opsi == "Suhu":
         st.markdown("### 🔃 Konversi Suhu")
@@ -375,15 +392,17 @@ with tab5:
             K = suhu_input
             C = K - 273.15
             F = (C * 9/5) + 32
-        else:
+        elif satuan_suhu == "Fahrenheit":
             F = suhu_input
             C = (F - 32) * 5/9
             K = C + 273.15
 
-        st.write(f"**Hasil Konversi:**")
-        st.write(f"- {C:.2f} °C")
-        st.write(f"- {K:.2f} K")
-        st.write(f"- {F:.2f} °F")
+        st.success(f"""
+        **Hasil Konversi Suhu:**
+        - {C:.2f} °C
+        - {K:.2f} K
+        - {F:.2f} °F
+        """)
 
     elif konversi_opsi == "Volume":
         st.markdown("### 🔃 Konversi Volume")
@@ -405,14 +424,19 @@ with tab5:
             L = m3 * 1000
             mL = L * 1000
             dm3 = L
-        else:
+        elif satuan_volume == "dm³":
             dm3 = volume_input
             L = dm3
             mL = L * 1000
             m3 = L / 1000
 
-        st.write(f"**Hasil Konversi:**")
-        st.write(f"- {L:.3f} L")
-        st.write(f"- {mL:.1f} mL")
-        st.write(f"- {m3:.6f} m³")
-        st.write(f"- {dm3:.3f} dm³")
+        st.success(f"""
+        **Hasil Konversi Volume:**
+        - {L:.3f} L
+        - {mL:.1f} mL
+        - {m3:.6f} m³
+        - {dm3:.3f} dm³
+        """)
+
+        st.caption("Catatan: 1 dm³ dianggap setara dengan 1 L dalam konteks kimia.")
+
