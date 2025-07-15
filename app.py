@@ -172,7 +172,7 @@ st.subheader("2. Hukum Charles")
 st.write("""
 Seorang ilmuwan bernama **Jacques Charles** (1747–1823) menyelidiki hubungan antara 
 **volume dan temperatur**
-
+""")
 
     st.markdown("Sumber: SOUISA, M. (2011). *Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte*. 5(1), 11–45.")
 
