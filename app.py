@@ -161,7 +161,6 @@ f. Setiap tumbukan yang terjadi (baik tumbukan antar molekul maupun tumbukan mol
     dengan catatan jumlah mol ($n$) dan suhu ($T$) tetap. Artinya, tekanan gas akan meningkat jika volume dikurangi, dan sebaliknya.
     """)
     
-
     st.markdown("## Hukum-hukum tentang Gas Ideal")
     st.markdown("### 1. Hukum Boyle")
 
