@@ -347,35 +347,29 @@ with tab5:
     if konversi_opsi == "Tekanan":
         st.markdown("### 🔃 Konversi Tekanan")
         tekanan_input = st.number_input("Masukkan nilai tekanan", value=1.0)
-        satuan_tekanan = st.selectbox("Dari satuan:", ["atm", "mmHg", "Pa", "kPa"])
+        satuan_tekanan = st.selectbox("Dari satuan:", ["atm", "mmHg", "Pa"])
 
         if satuan_tekanan == "atm":
             atm = tekanan_input
             mmHg = tekanan_input * 760
             Pa = tekanan_input * 101325
-            kPa = tekanan_input * 101.325
+           
         elif satuan_tekanan == "mmHg":
             atm = tekanan_input / 760
             mmHg = tekanan_input
             Pa = tekanan_input * 133.322
-            kPa = tekanan_input * 0.133322
+         
         elif satuan_tekanan == "Pa":
             atm = tekanan_input / 101325
             mmHg = tekanan_input / 133.322
             Pa = tekanan_input
-            kPa = tekanan_input / 1000
-        elif satuan_tekanan == "kPa":
-            atm = tekanan_input / 101.325
-            mmHg = tekanan_input / 0.133322
-            Pa = tekanan_input * 1000
-            kPa = tekanan_input
+           
 
         st.success(f"""
         **Hasil Konversi Tekanan:**
         - {atm:.4f} atm
         - {mmHg:.2f} mmHg
         - {Pa:.2f} Pa
-        - {kPa:.3f} kPa
         """)
 
     elif konversi_opsi == "Suhu":
