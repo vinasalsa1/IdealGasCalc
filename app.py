@@ -101,6 +101,8 @@ with tab1:
     """)
 
     st.latex("PV = nRT")  # Menampilkan persamaan secara matematis
+    
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Ideal_gas.svg/2560px-Ideal_gas.svg.png", caption="Model Gas Ideal")
 
     st.write("""
         Dengan antarmuka yang sederhana dan sistem satuan yang konsisten, 
