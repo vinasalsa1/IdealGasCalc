@@ -186,22 +186,95 @@ f. Setiap tumbukan yang terjadi (baik tumbukan antar molekul maupun tumbukan mol
     - $V_2$ = volume gas akhir (m³)
     """)
 
+  st.markdown("---")
+    st.subheader("2. Hukum Charles")
+
     st.write("""
-    Hubungan tekanan dan volume pada temperatur tetap menurut Hukum Boyle dapat digambarkan 
-    dalam bentuk grafik sebagai berikut:
-    """)
+Seorang ilmuwan bernama **Jacques Charles** (1747–1823) menyelidiki hubungan antara 
+**volume dan temperatur** gas dalam tekanan tetap, yang kini dikenal sebagai **Hukum Charles**.
 
-    # Tambahkan gambar ilustrasi grafik hukum Boyle
-    st.image(
-        "https://www.bing.com/images/search?view=detailV2&ccid=UBAQik2O&id=F3770EDB05FA7DDBEB5732BB0A816804CEC5F1CD&thid=OIP.UBAQik2O_ZjFZCqgUcLNVQAAAA&mediaurl=https%3a%2f%2fmiro.medium.com%2fv2%2fresize%3afit%3a304%2f1*anwe3O4Vyxz2_lFyianm0w.png&exph=276&expw=304&q=hukum+boyle+grafik&simid=608040720287420403&FORM=IRPRST&ck=091D0B6FB8548FC9297500CAA98317F9&selectedIndex=11&itb=0",
-        use_column_width=False,
-        width=400
-    )
+📌 **Hukum Charles menyatakan:**
+
+> *"Volume gas berbanding lurus dengan temperatur mutlaknya jika tekanan dijaga konstan."*
+
+Secara matematis dapat dituliskan:
+""")
+
+    st.latex(r"\frac{V}{T} = \text{konstan} \quad \text{atau} \quad \frac{V_1}{T_1} = \frac{V_2}{T_2}")
+
+    st.write("""
+**Keterangan:**
+- $V_1$ = volume gas awal (m³)  
+- $V_2$ = volume gas akhir (m³)  
+- $T_1$ = temperatur mutlak awal (K)  
+- $T_2$ = temperatur mutlak akhir (K)
+""")
+
+    st.write("""
+🔍 **Artinya:**  
+Jika temperatur naik, maka volume juga akan meningkat, asalkan tekanan tetap. Sebaliknya,
+jika temperatur turun, volume juga menurun.
+
+    st.markdown("---")
+    st.subheader("3. Hukum Gay-Lussac")
+
+        st.write("""
+Seorang ilmuwan bernama **Joseph Gay-Lussac** telah menyelidiki hubungan antara **tekanan dan temperatur**
+pada **volume tetap**. Hasil pengamatannya dikenal sebagai **Hukum Gay-Lussac**.
+
+📌 **Hukum Gay-Lussac menyatakan:**
+
+> *"Jika volume gas pada ruang tertutup dibuat tetap, maka tekanan gas berbanding lurus dengan temperatur mutlaknya."*
+
+Secara matematis:
+""")
+
+    st.latex(r"\frac{P}{T} = \text{konstan} \quad \text{atau} \quad \frac{P_1}{T_1} = \frac{P_2}{T_2}")
+
+    st.write("""
+**Keterangan:**
+- $P_1$ = tekanan gas awal (N/m² atau Pa)  
+- $P_2$ = tekanan gas akhir (N/m² atau Pa)  
+- $T_1$ = temperatur mutlak awal (K)  
+- $T_2$ = temperatur mutlak akhir (K)
+""")
+
+    st.write("""
+🔍 **Artinya:**  
+Jika temperatur meningkat, maka tekanan gas juga akan meningkat selama volume dijaga tetap, 
+dan sebaliknya.
+
+    st.markdown("---")
+    st.subheader("4. Hukum Boyle-GayLussac")
+
+    st.write("""
+Hukum Boyle, Hukum Charles, dan Hukum Gay-Lussac dapat digabungkan menjadi satu persamaan yang disebut **Hukum Boyle-GayLussac**.
+
+Persamaan Hukum Boyle-GayLussac menyatakan bahwa:
+
+> *"Hasil kali tekanan dan volume gas yang dibagi dengan temperatur mutlaknya adalah konstan."*
+
+Secara matematis ditulis:
+
+""")
+
+    st.latex(r"\frac{P V}{T} = \text{konstan} \quad \text{atau} \quad \frac{P_1 V_1}{T_1} = \frac{P_2 V_2}{T_2}")
+
+    st.write("""
+**Keterangan:**
+- $P_1$ = tekanan gas awal (N/m² atau Pa)  
+- $P_2$ = tekanan gas akhir (N/m² atau Pa)  
+- $V_1$ = volume gas awal (m³)  
+- $V_2$ = volume gas akhir (m³)  
+- $T_1$ = temperatur mutlak awal (K)  
+- $T_2$ = temperatur mutlak akhir (K)
+""")
+
+    st.write("""
+Artinya, perubahan tekanan, volume, dan temperatur gas saling terkait sehingga nilai $\frac{PV}{T}$ selalu tetap selama jumlah mol gas tidak berubah.
+""")
 
 
-
-
-    
     st.markdown("Sumber: SOUISA, M. (2011). *Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte*. 5(1), 11–45.")
 
 with tab3:
