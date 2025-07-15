@@ -86,7 +86,8 @@ input, select, textarea {
 # Ubah ke tampilan layar penuh
 st.set_page_config(layout="wide", page_title="Kalkulator Gas Ideal", page_icon="🧪")
 
-tab1, tab2, tab3, tab4 = st.tabs(["🏠 Beranda", "📘 Teori", "🧮 Kalkulator", "ℹ About Us"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["🏠 Beranda", "📘 Teori", "🧮 Kalkulator", "ℹ About Us", "🧾 Konversi Satuan"])
+
 
 with tab1:
     st.title("IDEAL GAS CALCULATOR")  # Judul besar
@@ -335,3 +336,83 @@ with tab4:
     Aplikasi ini dirancang dengan mengintegrasikan logika pemrograman dasar menggunakan bahasa Python dan modul Streamlit, 
     sehingga tidak hanya mendukung penguatan pemahaman konsep gas ideal, tetapi juga menjadi media pembelajaran pengembangan aplikasi berbasis data ilmiah.
     """)
+
+
+with tab5:
+    st.header("🧾 Konversi Satuan")
+    st.subheader("Konversi Tekanan, Suhu, dan Volume")
+
+    konversi_opsi = st.selectbox("Pilih jenis konversi:", ["Tekanan", "Suhu", "Volume"])
+
+    if konversi_opsi == "Tekanan":
+        st.markdown("### 🔃 Konversi Tekanan")
+        tekanan_input = st.number_input("Masukkan nilai tekanan", value=1.0)
+        satuan_tekanan = st.selectbox("Dari satuan:", ["atm", "mmHg", "Pa", "kPa"])
+
+        tekanan = {
+            "atm": tekanan_input,
+            "mmHg": tekanan_input * 760 if satuan_tekanan == "atm" else tekanan_input / 1.0 if satuan_tekanan == "mmHg" else tekanan_input / 133.322 if satuan_tekanan == "Pa" else tekanan_input * 1000 / 133.322,
+            "Pa": tekanan_input * 101325 if satuan_tekanan == "atm" else tekanan_input * 133.322 if satuan_tekanan == "mmHg" else tekanan_input if satuan_tekanan == "Pa" else tekanan_input * 1000,
+            "kPa": tekanan_input * 101.325 if satuan_tekanan == "atm" else tekanan_input * 0.133322 if satuan_tekanan == "mmHg" else tekanan_input / 1000 if satuan_tekanan == "Pa" else tekanan_input
+        }
+
+        st.write(f"**Hasil Konversi:**")
+        st.write(f"- {tekanan['atm']:.4f} atm")
+        st.write(f"- {tekanan['mmHg']:.2f} mmHg")
+        st.write(f"- {tekanan['Pa']:.2f} Pa")
+        st.write(f"- {tekanan['kPa']:.3f} kPa")
+
+    elif konversi_opsi == "Suhu":
+        st.markdown("### 🔃 Konversi Suhu")
+        suhu_input = st.number_input("Masukkan suhu", value=25.0)
+        satuan_suhu = st.selectbox("Dari satuan:", ["Celsius", "Kelvin", "Fahrenheit"])
+
+        if satuan_suhu == "Celsius":
+            C = suhu_input
+            K = C + 273.15
+            F = (C * 9/5) + 32
+        elif satuan_suhu == "Kelvin":
+            K = suhu_input
+            C = K - 273.15
+            F = (C * 9/5) + 32
+        else:
+            F = suhu_input
+            C = (F - 32) * 5/9
+            K = C + 273.15
+
+        st.write(f"**Hasil Konversi:**")
+        st.write(f"- {C:.2f} °C")
+        st.write(f"- {K:.2f} K")
+        st.write(f"- {F:.2f} °F")
+
+    elif konversi_opsi == "Volume":
+        st.markdown("### 🔃 Konversi Volume")
+        volume_input = st.number_input("Masukkan volume", value=1.0)
+        satuan_volume = st.selectbox("Dari satuan:", ["L", "mL", "m³", "dm³"])
+
+        if satuan_volume == "L":
+            L = volume_input
+            mL = L * 1000
+            m3 = L / 1000
+            dm3 = L
+        elif satuan_volume == "mL":
+            mL = volume_input
+            L = mL / 1000
+            m3 = L / 1000
+            dm3 = L
+        elif satuan_volume == "m³":
+            m3 = volume_input
+            L = m3 * 1000
+            mL = L * 1000
+            dm3 = L
+        else:
+            dm3 = volume_input
+            L = dm3
+            mL = L * 1000
+            m3 = L / 1000
+
+        st.write(f"**Hasil Konversi:**")
+        st.write(f"- {L:.3f} L")
+        st.write(f"- {mL:.1f} mL")
+        st.write(f"- {m3:.6f} m³")
+        st.write(f"- {dm3:.3f} dm³")
