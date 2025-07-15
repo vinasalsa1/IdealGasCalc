@@ -128,7 +128,12 @@ with tab2:
     Menurut Nurbury (2000:226), gas dikatakan *ideal* jika gaya tarik-menarik antar molekulnya dapat diabaikan. 
     Dalam praktiknya, pendekatan gas ideal sangat berguna untuk memodelkan perilaku gas di berbagai kondisi.
     
-    st.image(" https://cdn.britannica.com/48/62948-050-95F3D9BA/ideal-gas-law-volume-number-velocity-temperature.jpg", width=400)
+   st.image(
+    "https://cdn.britannica.com/48/62948-050-95F3D9BA/ideal-gas-law-volume-number-velocity-temperature.jpg"
+    ,
+    width=400
+)
+
 
  
     Untuk memahami perilaku gas, perlu diketahui hubungan antara *massa gas, **volume, dan **jumlah mol*. 
