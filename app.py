@@ -142,38 +142,8 @@ f. Setiap tumbukan ya
 
 """)
 
-st.markdown("## Hukum-hukum tentang Gas Ideal")
-st.markdown("### 1. Hukum Boyle")
 
-st.write("""
-Seorang ilmuwan bernama **Robert Boyle** (1627–1691) menyelidiki hubungan antara **tekanan (P)** dan **volume (V)** gas 
-dalam wadah tertutup pada temperatur tetap. Hasil penyelidikan ini dikenal sebagai *Hukum Boyle*.
-
-**Hukum Boyle menyatakan:**
-
-> “Hasil kali tekanan dan volume gas dalam wadah tertutup pada temperatur tetap adalah konstan.”
-
-Secara matematis dituliskan sebagai:
-""")
-
-st.latex("P \\times V = \\text{konstan} \\quad \\text{atau} \\quad P_1 V_1 = P_2 V_2")
-
-st.markdown("""
-**Keterangan:**
-- $P_1$ = tekanan gas awal (N/m² atau Pa)  
-- $V_1$ = volume gas awal (m³)  
-- $P_2$ = tekanan gas akhir (N/m² atau Pa)  
-- $V_2$ = volume gas akhir (m³)
-""")
-
-st.markdown("---")
-st.subheader("2. Hukum Charles")
-
-st.write("""
-Seorang ilmuwan bernama **Jacques Charles** (1747–1823) menyelidiki hubungan antara 
-**volume dan temperatur**
-""")
-st.markdown("Sumber: SOUISA, M. (2011). *Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte*. 5(1), 11–45.")
+    st.markdown("Sumber: SOUISA, M. (2011). *Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte*. 5(1), 11–45.")
 
 with tab3:
     # Konstanta gas ideal dengan satuan yang saling terkait
