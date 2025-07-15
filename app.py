@@ -86,7 +86,7 @@ input, select, textarea {
 # Ubah ke tampilan layar penuh
 st.set_page_config(layout="wide", page_title="Kalkulator Gas Ideal", page_icon="🧪")
 
-tab1, tab2, tab3, tab4 = st.tabs(["🏠 Beranda", "📘 Teori", "🧮 Kalkulator", "ℹ️ About Us"])
+tab1, tab2, tab3, tab4 = st.tabs(["🏠 Beranda", "📘 Teori", "🧮 Kalkulator", "ℹ About Us"])
 
 with tab1:
     st.title("IDEAL GAS CALCULATOR")  # Judul besar
@@ -104,7 +104,7 @@ with tab1:
     st.write("""
         Dengan antarmuka yang sederhana dan sistem satuan yang konsisten, 
         Anda dapat melakukan simulasi dan perhitungan ilmiah secara lebih akurat dan efisien.
-        Silakan gunakan tab **Kalkulator** untuk memulai perhitungan.
+        Silakan gunakan tab *Kalkulator* untuk memulai perhitungan.
     """)
 
 
@@ -112,26 +112,26 @@ with tab2:
     st.header("📘 Teori Gas Ideal")
 
     st.write("""
-    **Termodinamika** adalah cabang ilmu fisika yang mempelajari hubungan antara energi, panas, dan kerja dalam suatu sistem. 
+    *Termodinamika* adalah cabang ilmu fisika yang mempelajari hubungan antara energi, panas, dan kerja dalam suatu sistem. 
     Ilmu ini berfokus pada sifat-sifat makroskopik zat, seperti suhu, tekanan, dan volume, yang dapat diukur secara langsung.
-    Salah satu konsep dasar dalam termodinamika adalah **persamaan keadaan**, yang menjelaskan hubungan antara sifat-sifat 
+    Salah satu konsep dasar dalam termodinamika adalah *persamaan keadaan*, yang menjelaskan hubungan antara sifat-sifat 
     tersebut dalam bentuk matematis.
 
-    Salah satu persamaan keadaan yang paling sederhana dan paling umum digunakan adalah **persamaan gas ideal**:
+    Salah satu persamaan keadaan yang paling sederhana dan paling umum digunakan adalah *persamaan gas ideal*:
     """)
 
     st.latex("PV = nRT")
 
     st.write("""
-    Menurut Nurbury (2000:226), gas dikatakan **ideal** jika gaya tarik-menarik antar molekulnya dapat diabaikan. 
+    Menurut Nurbury (2000:226), gas dikatakan *ideal* jika gaya tarik-menarik antar molekulnya dapat diabaikan. 
     Dalam praktiknya, pendekatan gas ideal sangat berguna untuk memodelkan perilaku gas di berbagai kondisi.
 
-    Untuk memahami perilaku gas, perlu diketahui hubungan antara **massa gas**, **volume**, dan **jumlah mol**. 
+    Untuk memahami perilaku gas, perlu diketahui hubungan antara *massa gas, **volume, dan **jumlah mol*. 
     Jumlah mol ($n$) adalah perbandingan antara massa total gas dengan massa molekul relatif gas tersebut.
     
-    Misalnya, saat udara dipompa ke dalam balon atau alat suntik (*syringe*), semakin banyak gas yang dimasukkan, 
-    semakin besar volumenya (dengan asumsi suhu dan tekanan tetap). Hubungan ini bersifat **linier**, 
-    dan dapat dijelaskan dengan memasukkan **konstanta gas** dan menyusun hubungan menjadi:
+    Misalnya, saat udara dipompa ke dalam balon atau alat suntik (syringe), semakin banyak gas yang dimasukkan, 
+    semakin besar volumenya (dengan asumsi suhu dan tekanan tetap). Hubungan ini bersifat *linier*, 
+    dan dapat dijelaskan dengan memasukkan *konstanta gas* dan menyusun hubungan menjadi:
     
     $$ PV = nRT $$
 
@@ -139,25 +139,24 @@ with tab2:
     Hal ini penting, terutama dalam eksperimen-eksperimen yang melibatkan wadah tertutup seperti tabung suntik atau bola udara.
 
     Penelitian sebelumnya telah banyak membahas hubungan dasar ini, namun pengembangan lebih lanjut mengenai 
-    **jumlah mol dalam sistem volume tetap atau suhu tetap** menggunakan **persamaan gas ideal**, serta 
-    hukum **Boyle–Mariotte** dan **Gay–Lussac**, membuka peluang baru untuk kajian lebih mendalam dalam sistem tertutup.
+    *jumlah mol dalam sistem volume tetap atau suhu tetap* menggunakan *persamaan gas ideal*, serta 
+    hukum *Boyle–Mariotte* dan *Gay–Lussac*, membuka peluang baru untuk kajian lebih mendalam dalam sistem tertutup.
     """)
 
-    st.markdown("*Sumber: SOUISA,M. 2011. Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte. 5(1). Hal 11-45.*")
+    st.markdown("Sumber: SOUISA,M. 2011. Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte. 5(1). Hal 11-45.")
 
 
 with tab3:
     # Konstanta gas ideal dengan satuan yang saling terkait
     R_systems = {
-   "Sistem SI": {
-    "R": 8.314,
-    "unit_R": "J/(mol.K)",
-    "tekanan": ("Pa",),            
-    "volume": ("m³",),             
-    "default_pressure": 101325,    
-    "default_volume": 0.0224       
-},
-
+    "Sistem SI": {
+        "R": 8.314,
+        "unit_R": "J/(mol.K)",
+        "tekanan": ("kPa", "Pa"),
+        "volume": ("m³", "dm³"),
+        "default_pressure": 101.325,
+        "default_volume": 0.0224
+    },
     "Sistem Atmosfer": {
         "R": 0.082057,
         "unit_R": "L.atm/(mol.K)",
@@ -194,7 +193,7 @@ with tab3:
     
     # Tampilkan nilai R yang dipilih
     st.info(f"""
-    *Konstanta gas yang dipilih:*
+    Konstanta gas yang dipilih:
     - R = {R} {unit_R}
     - Sistem: {selected_system}
     """)
@@ -267,7 +266,7 @@ with tab3:
     # Penjelasan sistem satuan
     with st.expander("📚 Teori Dasar"):
         st.markdown("""
-        *Persamaan Gas Ideal:*
+        Persamaan Gas Ideal:
           $$
         PV = nRT
         $$
@@ -281,7 +280,7 @@ with tab3:
         """)
     
         st.markdown("""
-        *Konsistensi Satuan:*
+        Konsistensi Satuan:
         Aplikasi ini secara otomatis menyesuaikan satuan tekanan dan volume 
         agar konsisten dengan satuan R yang dipilih, sehingga menghindari 
         kesalahan konversi satuan.
@@ -290,7 +289,7 @@ with tab3:
     # Tambahkan contoh perhitungan
     with st.expander("🧪 Contoh Perhitungan"):
         st.markdown("""
-        *Contoh 1 (Menghitung Suhu):*
+        Contoh 1 (Menghitung Suhu):
         - Sistem: Atmosfer (R = 0.082057 L·atm/(mol·K))
         - P = 1 atm
         - V = 22.4 L
@@ -304,16 +303,16 @@ with tab3:
     
 
 with tab4:
-    st.header("ℹ️ About Us")
+    st.header("ℹ About Us")
 
     st.subheader("Kelompok 8 – Mata Kuliah Logika Pemrograman Komputer")
 
     st.write("""
-    Aplikasi ini dikembangkan oleh **Kelompok 8** sebagai bagian dari tugas proyek pada mata kuliah *Logika Pemrograman Komputer*  
-    Program Studi **D3 Analisis Kimia**, dengan tujuan untuk menerapkan konsep logika pemrograman dalam konteks ilmiah yang relevan 
+    Aplikasi ini dikembangkan oleh *Kelompok 8* sebagai bagian dari tugas proyek pada mata kuliah Logika Pemrograman Komputer  
+    Program Studi *D3 Analisis Kimia*, dengan tujuan untuk menerapkan konsep logika pemrograman dalam konteks ilmiah yang relevan 
     dengan bidang keilmuan kami.
 
-    **Anggota Kelompok 8:**
+    *Anggota Kelompok 8:*
     1. Aulia Cahyani 
     2. Firdaus Cahya Ramadhan
     3. Muhammad Daffa Faliha
@@ -326,8 +325,8 @@ with tab4:
     st.subheader("Tujuan Pengembangan Aplikasi")
 
     st.write("""
-    Aplikasi **Kalkulator Gas Ideal** ini bertujuan untuk membantu pengguna, baik mahasiswa, dosen, maupun praktisi kimia, 
-    dalam memahami dan menghitung hubungan antara tekanan, volume, suhu, dan jumlah mol suatu gas berdasarkan **persamaan gas ideal (PV = nRT)**.  
+    Aplikasi *Kalkulator Gas Ideal* ini bertujuan untuk membantu pengguna, baik mahasiswa, dosen, maupun praktisi kimia, 
+    dalam memahami dan menghitung hubungan antara tekanan, volume, suhu, dan jumlah mol suatu gas berdasarkan *persamaan gas ideal (PV = nRT)*.  
     Dengan antarmuka yang interaktif dan sistem satuan yang konsisten, aplikasi ini diharapkan mampu mempermudah proses simulasi dan perhitungan 
     pada berbagai kondisi eksperimen, khususnya dalam konteks pembelajaran maupun penelitian dasar di bidang kimia analitik dan termodinamika.
 
