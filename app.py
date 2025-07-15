@@ -131,7 +131,6 @@ with tab2:
 
     st.image(
         "https://cdn.britannica.com/48/62948-050-95F3D9BA/ideal-gas-law-volume-number-velocity-temperature.jpg",
-        caption="Diagram Hukum Gas Ideal (P–V–T)",
         width=400
     )
 
