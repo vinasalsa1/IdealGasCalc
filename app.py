@@ -134,6 +134,21 @@ with tab2:
         width=400
     )
 
+    st.markdown("""
+    **Penjelasan Gambar: Perilaku Gas Ideal**
+
+    Gambar di atas menunjukkan ilustrasi perilaku gas ideal dalam dua wadah dengan volume berbeda. Kedua wadah berisi jumlah molekul gas yang sama, namun memiliki volume yang berbeda, yaitu *Volume 1* (lebih besar) dan *Volume 2* (lebih kecil).
+
+    - Pada **Volume 1** (sebelah kiri), molekul gas tersebar dalam ruang yang lebih luas. Tumbukan antar molekul dan terhadap dinding wadah lebih jarang terjadi, sehingga tekanan gas lebih **rendah**.
+    - Sebaliknya, pada **Volume 2** (sebelah kanan), ruang yang tersedia lebih sempit, dan frekuensi tumbukan meningkat sehingga tekanan gas menjadi lebih **tinggi**.
+
+    Ilustrasi ini menggambarkan hukum **Boyle**, yaitu:
+
+    $$P \\propto \\frac{1}{V}$$
+
+    dengan catatan jumlah mol ($n$) dan suhu ($T$) tetap. Artinya, tekanan gas akan meningkat jika volume dikurangi, dan sebaliknya.
+    """)
+    
     st.write("""
     Untuk memahami perilaku gas, perlu diketahui hubungan antara *massa gas*, *volume*, dan *jumlah mol*. 
     Jumlah mol ($n$) adalah perbandingan antara massa total gas dengan massa molekul relatif gas tersebut.
