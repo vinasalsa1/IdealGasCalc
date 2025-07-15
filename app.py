@@ -161,24 +161,47 @@ f. Setiap tumbukan yang terjadi (baik tumbukan antar molekul maupun tumbukan mol
     dengan catatan jumlah mol ($n$) dan suhu ($T$) tetap. Artinya, tekanan gas akan meningkat jika volume dikurangi, dan sebaliknya.
     """)
     
+
+    st.markdown("## Hukum-hukum tentang Gas Ideal")
+    st.markdown("### 1. Hukum Boyle")
+
     st.write("""
-    Untuk memahami perilaku gas, perlu diketahui hubungan antara *massa gas*, *volume*, dan *jumlah mol*. 
-    Jumlah mol ($n$) adalah perbandingan antara massa total gas dengan massa molekul relatif gas tersebut.
+    Seorang ilmuwan bernama **Robert Boyle** (1627–1691) menyelidiki hubungan antara **tekanan (P)** dan **volume (V)** gas 
+    dalam wadah tertutup pada temperatur tetap. Hasil penyelidikan ini dikenal sebagai *Hukum Boyle*.
     
-    Misalnya, saat udara dipompa ke dalam balon atau alat suntik (*syringe*), semakin banyak gas yang dimasukkan, 
-    semakin besar volumenya (dengan asumsi suhu dan tekanan tetap). Hubungan ini bersifat *linier*, 
-    dan dapat dijelaskan dengan memasukkan *konstanta gas* dan menyusun hubungan menjadi:
+    **Hukum Boyle menyatakan:**
+
+    > “Hasil kali tekanan dan volume gas dalam wadah tertutup pada temperatur tetap adalah konstan.”
     
-    $$ PV = nRT $$
-
-    Jika tekanan ($P$), suhu ($T$), dan volume ($V$) diketahui, maka jumlah mol gas dapat dihitung. 
-    Hal ini penting, terutama dalam eksperimen-eksperimen yang melibatkan wadah tertutup seperti tabung suntik atau bola udara.
-
-    Penelitian sebelumnya telah banyak membahas hubungan dasar ini, namun pengembangan lebih lanjut mengenai 
-    *jumlah mol dalam sistem volume tetap atau suhu tetap* menggunakan *persamaan gas ideal*, serta 
-    hukum *Boyle–Mariotte* dan *Gay–Lussac*, membuka peluang baru untuk kajian lebih mendalam dalam sistem tertutup.
+    Secara matematis dituliskan sebagai:
     """)
 
+    st.latex("P \\times V = \\text{konstan} \\quad \\text{atau} \\quad P_1 V_1 = P_2 V_2")
+
+    st.markdown("""
+    **Keterangan:**
+    - $P_1$ = tekanan gas awal (N/m² atau Pa)  
+    - $V_1$ = volume gas awal (m³)  
+    - $P_2$ = tekanan gas akhir (N/m² atau Pa)  
+    - $V_2$ = volume gas akhir (m³)
+    """)
+
+    st.write("""
+    Hubungan tekanan dan volume pada temperatur tetap menurut Hukum Boyle dapat digambarkan 
+    dalam bentuk grafik sebagai berikut:
+    """)
+
+    # Tambahkan gambar ilustrasi grafik hukum Boyle
+    st.image(
+        "https://www.bing.com/images/search?view=detailV2&ccid=UBAQik2O&id=F3770EDB05FA7DDBEB5732BB0A816804CEC5F1CD&thid=OIP.UBAQik2O_ZjFZCqgUcLNVQAAAA&mediaurl=https%3a%2f%2fmiro.medium.com%2fv2%2fresize%3afit%3a304%2f1*anwe3O4Vyxz2_lFyianm0w.png&exph=276&expw=304&q=hukum+boyle+grafik&simid=608040720287420403&FORM=IRPRST&ck=091D0B6FB8548FC9297500CAA98317F9&selectedIndex=11&itb=0",
+        use_column_width=False,
+        width=400
+    )
+
+
+
+
+    
     st.markdown("Sumber: SOUISA, M. (2011). *Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte*. 5(1), 11–45.")
 
 with tab3:
