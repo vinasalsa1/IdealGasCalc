@@ -152,10 +152,10 @@ with tab3:
    "Sistem SI": {
     "R": 8.314,
     "unit_R": "J/(mol.K)",
-    "tekanan": ("Pa",),            # tuple satu elemen
-    "volume": ("m³",),             # tuple satu elemen
-    "default_pressure": 101325,    # dalam Pa, nilai biasanya 101325 bukan 101.325
-    "default_volume": 0.0224       # m³/mol pada STP
+    "tekanan": ("Pa",),            
+    "volume": ("m³",),             
+    "default_pressure": 101325,    
+    "default_volume": 0.0224       
 },
 
     "Sistem Atmosfer": {
