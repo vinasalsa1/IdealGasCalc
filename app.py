@@ -109,7 +109,6 @@ with tab1:
         Silakan gunakan tab *Kalkulator* untuk memulai perhitungan.
     """)
 
-
 with tab2:
     st.header("📘 Teori Gas Ideal")
 
@@ -128,9 +127,9 @@ with tab2:
 Istilah gas ideal digunakan untuk menyederhanakan permasalahan tentang gas. 
 Karena partikel-partikel gas dapat bergerak sangat bebas dan dapat mengisi seluruh
 ruangan yang ditempatinya, maka menimbulkan kesulitan dalam mempelajari sifat-sifat gas riil.
-  """)
+    """)
 
-     st.image(
+    st.image(
         "https://cdn.britannica.com/48/62948-050-95F3D9BA/ideal-gas-law-volume-number-velocity-temperature.jpg",
         width=400
     )
@@ -148,11 +147,11 @@ Ilustrasi ini menggambarkan hukum **Boyle**, yaitu:
 $$P \\propto \\frac{1}{V}$$
 
 dengan catatan jumlah mol ($n$) dan suhu ($T$) tetap. Artinya, tekanan gas akan meningkat jika volume dikurangi, dan sebaliknya.
-""")
+    """)
 
-
+    st.write("""
 Sifat-sifat gas ideal adalah sebagai berikut:
-""")
+    """)
 
     st.markdown("""
 a. Gas ideal terdiri dari partikel-partikel yang disebut molekul-molekul dalam jumlah besar. Molekul ini dapat berupa atom maupun kelompok atom.  
@@ -160,10 +159,8 @@ b. Ukuran partikel gas dapat diabaikan terhadap ukuran wadah.
 c. Setiap partikel gas selalu bergerak dengan arah sembarang (acak) dengan berbagai kelajuan.  
 d. Partikel gas terdistribusi merata pada seluruh ruangan dalam wadah.  
 e. Gerakan partikel gas memenuhi Hukum Newton tentang gerak.  
-f. Setiap tumbukan ya
-
-""")
-
+f. Setiap tumbukan yang terjadi (baik tumbukan antar molekul maupun tumbukan molekul dengan dinding) dianggap tumbukan lenting sempurna dan terjadi pada waktu yang sangat singkat.
+    """)
 
     st.markdown("Sumber: SOUISA, M. (2011). *Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte*. 5(1), 11–45.")
 
