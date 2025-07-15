@@ -125,8 +125,18 @@ with tab2:
     st.latex("PV = nRT")
 
     st.write("""
-    Menurut Nurbury (2000:226), gas dikatakan *ideal* jika gaya tarik-menarik antar molekulnya dapat diabaikan. 
-    Dalam praktiknya, pendekatan gas ideal sangat berguna untuk memodelkan perilaku gas di berbagai kondisi.
+    Istilah gas ideal digunakan menyederhanakan permasalahan tentang gas.
+ Karena partikel-partikel gas dapat bergerak sangat bebas dan dapat mengisi seluruh
+ ruangan yang ditempatinya, maka menimbulkan kesulitan dalam mempelajari sifat
+sifat gas riil.
+ Sifat-sifat gas ideal adalah sebagai berikut
+    a. Gas ideal terdiri dari partikel-partikel yang disebut molekul-molekul dalam
+     jumlah besar. Molekul ini dapat berupa atom maupun kelompok atom.
+    b. Ukuran partikel gas dapat diabaikan terhadap ukuran wadah.
+    c. Setiap partikel gas selalu bergerak dengan arah sembarang (acak) dengan berbagai kelajuan.
+    d. Partikel gas terdistribusi merata pada seluruh ruangan dalam wadah.
+    e. Gerakan partikel gas memenuhi Hukum Newton tentang gerak.
+    f. Setiap tumbukan yang terjadi (baik tumbukan antar molekul maupun    tumbukan molekul dengan dinding) dianggap tumbukan lenting sempurna dan terjadi pada waktu yang sangat singkat.
     """)
 
     st.image(
