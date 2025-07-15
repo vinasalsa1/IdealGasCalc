@@ -121,25 +121,25 @@ with tab2:
 
     Salah satu persamaan keadaan yang paling sederhana dan paling umum digunakan adalah *persamaan gas ideal*:
     """)
-   
+
     st.latex("PV = nRT")
 
     st.write("""
     Menurut Nurbury (2000:226), gas dikatakan *ideal* jika gaya tarik-menarik antar molekulnya dapat diabaikan. 
     Dalam praktiknya, pendekatan gas ideal sangat berguna untuk memodelkan perilaku gas di berbagai kondisi.
-    
-   st.image(
-    "https://cdn.britannica.com/48/62948-050-95F3D9BA/ideal-gas-law-volume-number-velocity-temperature.jpg"
-    ,
-    width=400
-)
+    """)
 
+    st.image(
+        "https://www.chemistrylearner.com/wp-content/uploads/2019/08/ideal-gas-law-equation.png",
+        caption="Diagram Hukum Gas Ideal (P–V–T)",
+        width=400
+    )
 
- 
-    Untuk memahami perilaku gas, perlu diketahui hubungan antara *massa gas, **volume, dan **jumlah mol*. 
+    st.write("""
+    Untuk memahami perilaku gas, perlu diketahui hubungan antara *massa gas*, *volume*, dan *jumlah mol*. 
     Jumlah mol ($n$) adalah perbandingan antara massa total gas dengan massa molekul relatif gas tersebut.
     
-    Misalnya, saat udara dipompa ke dalam balon atau alat suntik (syringe), semakin banyak gas yang dimasukkan, 
+    Misalnya, saat udara dipompa ke dalam balon atau alat suntik (*syringe*), semakin banyak gas yang dimasukkan, 
     semakin besar volumenya (dengan asumsi suhu dan tekanan tetap). Hubungan ini bersifat *linier*, 
     dan dapat dijelaskan dengan memasukkan *konstanta gas* dan menyusun hubungan menjadi:
     
@@ -153,8 +153,7 @@ with tab2:
     hukum *Boyle–Mariotte* dan *Gay–Lussac*, membuka peluang baru untuk kajian lebih mendalam dalam sistem tertutup.
     """)
 
-    st.markdown("Sumber: SOUISA,M. 2011. Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte. 5(1). Hal 11-45.")
-
+    st.markdown("Sumber: SOUISA, M. (2011). *Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte*. 5(1), 11–45.")
 
 with tab3:
     # Konstanta gas ideal dengan satuan yang saling terkait
