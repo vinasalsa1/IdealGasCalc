@@ -128,7 +128,7 @@ with tab2:
 Istilah gas ideal digunakan untuk menyederhanakan permasalahan tentang gas. 
 Karena partikel-partikel gas dapat bergerak sangat bebas dan dapat mengisi seluruh
 ruangan yang ditempatinya, maka menimbulkan kesulitan dalam mempelajari sifat-sifat gas riil.
-
+  """)
 
      st.image(
         "https://cdn.britannica.com/48/62948-050-95F3D9BA/ideal-gas-law-volume-number-velocity-temperature.jpg",
