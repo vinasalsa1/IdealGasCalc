@@ -140,7 +140,7 @@ d. Partikel gas terdistribusi merata pada seluruh ruangan dalam wadah.
 e. Gerakan partikel gas memenuhi Hukum Newton tentang gerak.  
 f. Setiap tumbukan ya
 
-
+""")
 
     st.markdown("Sumber: SOUISA, M. (2011). *Penentuan Jumlah Mol Udara dalam Silinder Bola dengan Menggunakan Hukum Boyle-Meriotte*. 5(1), 11–45.")
 
