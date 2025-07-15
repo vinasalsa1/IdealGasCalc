@@ -124,7 +124,7 @@ with tab2:
 
     st.latex("PV = nRT")
 
-  st.write("""
+    st.write("""
 Istilah gas ideal digunakan untuk menyederhanakan permasalahan tentang gas. 
 Karena partikel-partikel gas dapat bergerak sangat bebas dan dapat mengisi seluruh
 ruangan yang ditempatinya, maka menimbulkan kesulitan dalam mempelajari sifat-sifat gas riil.
@@ -132,7 +132,7 @@ ruangan yang ditempatinya, maka menimbulkan kesulitan dalam mempelajari sifat-si
 Sifat-sifat gas ideal adalah sebagai berikut:
 """)
 
-st.markdown("""
+    st.markdown("""
 a. Gas ideal terdiri dari partikel-partikel yang disebut molekul-molekul dalam jumlah besar. Molekul ini dapat berupa atom maupun kelompok atom.  
 b. Ukuran partikel gas dapat diabaikan terhadap ukuran wadah.  
 c. Setiap partikel gas selalu bergerak dengan arah sembarang (acak) dengan berbagai kelajuan.  
